@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+# artefatos de build do kernel
+*.ko
+*.o
+*.mod
+*.mod.c
+*.cmd
+.*.cmd
+Module.symvers
+modules.order
+.tmp_versions/
+# nunca versionar binários/instaladores proprietários
+*.zip
+*.exe
+*.dll
+*.sys
+*.cab

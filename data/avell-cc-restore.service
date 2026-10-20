@@ -1,0 +1,12 @@
+[Unit]
+Description=Avell Control Center - restaurar configurações de hardware
+After=power-profiles-daemon.service systemd-modules-load.service
+Wants=systemd-modules-load.service
+
+[Service]
+Type=oneshot
+ExecStartPre=-/sbin/modprobe avell_dchu
+ExecStart=/usr/libexec/avell-cc/avell-cc-helper restore
+
+[Install]
+WantedBy=multi-user.target
